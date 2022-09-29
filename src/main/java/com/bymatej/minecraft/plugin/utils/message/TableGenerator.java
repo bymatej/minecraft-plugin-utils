@@ -80,7 +80,11 @@ public class TableGenerator {
     }
 
     private String spaces(int length) {
-        return " ".repeat(Math.max(0, length));
+        StringBuilder s = new StringBuilder();
+        for (int i = 0; i < length; i++) {
+            s.append(" ");
+        }
+        return s.toString();
     }
 
     private static class Row {
