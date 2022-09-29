@@ -1,2 +1,2 @@
 rootProject.name = 'minecraft-plugin-utils'
-
+include('lib')
