@@ -20,11 +20,11 @@ public class NearPlayerEntitySpawner {
 
     private static final Random random = new Random();
 
-    public static void spawnEntityNearPlayer(Player player, EntityType entityType, int minimumBlocksAway, int maximumBlocksAway, boolean broadcastMessage) {
-        spawnEntityNearPlayer(player, entityType, minimumBlocksAway, maximumBlocksAway, "", broadcastMessage);
+    public static Entity spawnEntityNearPlayer(Player player, EntityType entityType, int minimumBlocksAway, int maximumBlocksAway, boolean broadcastMessage) {
+        return spawnEntityNearPlayer(player, entityType, minimumBlocksAway, maximumBlocksAway, "", broadcastMessage);
     }
 
-    public static void spawnEntityNearPlayer(Player player, EntityType entityType, int minimumBlocksAway, int maximumBlocksAway, String customEntityName, boolean broadcastMessage) {
+    public static Entity spawnEntityNearPlayer(Player player, EntityType entityType, int minimumBlocksAway, int maximumBlocksAway, String customEntityName, boolean broadcastMessage) {
         Location playerLocation = player.getLocation();
 
         Location entitySpawnLocation = getRandomLocation(playerLocation, minimumBlocksAway, maximumBlocksAway);
@@ -44,6 +44,7 @@ public class NearPlayerEntitySpawner {
         }
 
         sendMessage(entity, player, broadcastMessage);
+        return entity;
     }
 
     private static boolean locationIsVisible(Player player, Location location) {

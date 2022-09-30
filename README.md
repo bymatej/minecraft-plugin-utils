@@ -1,6 +1,10 @@
 # Minecraft Spigot Plugin Utils
 My utils for my Spigot plugins. It contains some useful Util methods and classes that I commonly use, and they make my development easier and reduce code duplications across plugins.
 
+## Dependencies
+Depends on: 
+- `'org.spigotmc:spigot-api:1.19.2-R0.1-SNAPSHOT'`
+
 # Tools
 
 [comment]: <> (Todo: It would be useful to have this as javadoc)
@@ -9,7 +13,7 @@ My utils for my Spigot plugins. It contains some useful Util methods and classes
 Utilities for entities.
 
 ### NearPlayerEntitySpawner
-Spawns an entity near the player.
+Spawns an entity near the player. Returns the spawned entity.
 
 Usage:
 ```
