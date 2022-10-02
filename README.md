@@ -57,15 +57,15 @@ Generate messages in a table-like fashion.
 
 Usage: 
 ```
-private void displayPlayerInfo(Player sender, List<NPC> players) {
+private void displayPlayerInfo(CommandSender sender, List<Player> players) {
         // player ID, player name, player's location
         TableGenerator tableGenerator = new TableGenerator(TableGenerator.Alignment.LEFT, 
         TableGenerator.Alignment.LEFT, 
         TableGenerator.Alignment.LEFT);
         tableGenerator.addRow("player ID", "player name", "player's location");
         players.forEach(player -> {
-            if (player.getEntity() != null) {
-                Location loc = player.getEntity().getLocation();
+            if (player != null) {
+                Location loc = player.getLocation();
                 String location = format("%s / %s / %s", loc.getBlockX(), loc.getBlockY(), loc.getBlockZ());
                 tableGenerator.addRow(Integer.toString(player.getId()), player.getName(), location);
             } else {
