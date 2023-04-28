@@ -3,7 +3,7 @@ My utils for my Spigot plugins. It contains some useful Util methods and classes
 
 ## Dependencies
 Depends on: 
-- `'org.spigotmc:spigot-api:1.19.2-R0.1-SNAPSHOT'`
+- `'org.spigotmc:spigot-api:1.19.4-R0.1-SNAPSHOT'`
 
 # Tools
 
