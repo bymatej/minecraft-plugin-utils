@@ -38,9 +38,11 @@ public class NearPlayerEntitySpawner {
         }
 
         Entity entity = player.getWorld().spawnEntity(entitySpawnLocation, entityType);
-        entity.setCustomNameVisible(true);
         if (customEntityName != null && customEntityName.length() > 0) {
+            entity.setCustomNameVisible(true);
             entity.setCustomName(customEntityName);
+        } else {
+            entity.setCustomNameVisible(false);
         }
 
         sendMessage(entity, player, broadcastMessage);
